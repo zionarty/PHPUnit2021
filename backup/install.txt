@@ -1,0 +1,13 @@
+1. https://windows.php.net/downloads/releases/
+2. download php-7.4.16-nts-Win32-vc15-x64.zip and extract file
+3. copy path file and parts in variable in system name path
+4. typing php -v in cmd command line
+5. https://getcomposer.org/download/
+6. download Composer-Setup.exe and run install
+7. typing composer in cmd command line
+    install phpunit
+1. mkdir PHPUnitCourse (create folder project)
+2. cd PHPUnitCourse
+3. composer require --dev phpunit/phpunit ^7
+4. cd vendor/bin
+5. phpunit --version
