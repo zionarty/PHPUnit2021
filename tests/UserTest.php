@@ -22,4 +22,21 @@ class UserTest extends TestCase
 
         $this->assertEquals('', $user->getFullName());
     }
+    public function testNotificationIsSent()
+    {   
+        $user =new User;
+
+        $mock_mailler = $this->createMock(Mailler::class);
+
+        $mock_mailler->method('sendMessage')
+            ->willReturn(true);
+
+        $user->setMailler(new Mailler);
+
+        $user->email = 'sionarty@gmail.com';
+
+        $this->assertTrue($user->notify("Hello"));
+
+    }
+
 }
